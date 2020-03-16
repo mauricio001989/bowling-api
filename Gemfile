@@ -22,8 +22,13 @@ gem 'puma', '~> 4.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+# Security
+gem 'rack-cors'
+gem 'versionist', '~> 1.7.0'
+gem 'interactor', '~> 3.1.1'
+
+gem 'active_model_serializers'
+gem 'i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,4 +60,5 @@ group :test do
   gem 'rack-test', require: 'rack/test'
 
   gem 'test-prof', '~> 0.7.5'
+  gem 'simplecov', require: false
 end
