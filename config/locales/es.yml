@@ -1,0 +1,17 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          blank: No puede estar en blanco
+        bowling_game:
+          blank: No puede estar en blanco
+          points_error: Error de puntos
+
+  application:
+    index:
+      messages:
+        welcome: Bienvenido a Bowling
+    alerts:
+      messages:
+        record_not_found: El recurso que está solicitando no existe
