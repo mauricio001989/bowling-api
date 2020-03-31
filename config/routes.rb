@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json }) do
+    resources :bowling_lanes
+    resources :users
+    resources :bowling_games, only: %i[index create show] do
+      collection do
+        put :points, to: 'bowling_games#update'
+      end
+    end
+  end
 end
