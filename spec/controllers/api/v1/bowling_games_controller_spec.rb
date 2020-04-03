@@ -69,4 +69,29 @@ RSpec.describe Api::V1::BowlingGamesController, type: :controller do
       end
     end
   end
+
+  describe 'PUT #create' do
+    subject(:http_request) { put :create, params: params }
+    let(:user) { create(:user) }
+    let(:bowling_lane) { create(:bowling_lane) }
+
+    let(:params) do
+      {
+        bowling_game:{
+          user_id: user.id,
+          bowling_lane_id: bowling_lane.id
+        }
+      }
+    end
+
+    context "when is ten point in first tries" do
+      before do
+        http_request
+      end
+
+      it 'when responds ok' do
+        expect(response).to have_http_status(:created)
+      end
+    end
+  end
 end
