@@ -150,7 +150,7 @@ https://bowling-api-mao.herokuapp.com/api/v1/users?locale=es
 
 - SHOW GET params (id_user)
 
-https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/points?locale=es
+https://bowling-api-mao.herokuapp.com/api/v1/users/1
 
 ```
 {
