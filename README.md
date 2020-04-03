@@ -53,3 +53,36 @@ https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/points?locale=es
 }
 ```
 
+- SHOW GET params(id)
+
+https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/1?locale=es
+```
+{
+    "id": 1,
+    "total_points": 10,
+    "points": [
+        {
+            "raund-1": {
+                "tries": "strike",
+                "frames": {
+                    "golpe_1": 10,
+                    "golpe_2": 0
+                },
+                "accumulate": 2
+            }
+        }
+    ],
+    "user": {
+        "id": 1,
+        "name": "caMI",
+        "document": "123",
+        "email": "cami@ggg.com"
+    },
+    "bowling_lane": {
+        "id": 1,
+        "length": "33"
+    }
+}
+```
+
+
