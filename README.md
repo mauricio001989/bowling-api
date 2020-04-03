@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Gems extras in the project
+ - Active_model_serializers
+ - Factory_bot_rails
+ - Faker
+ - i18n
+ - Interactor
+ - Simplecov
+ - Rack-cors
+ - Rubocop
+ - Rspec-rails
+ - Versionist
+ 
+ 
+# Created models
+- BowlingGame 
+- BowlingLane
+- Users
 
-Things you may want to cover:
+# Bowling game
 
-* Ruby version
+#### GET  /api/v1/bowling_games        (INDEX)
+#### GET  /api/v1/bowling_games/1      (SHOW)
+#### POST /api/v1/bowling_games        (CREATE)
+#### PATCH/PUT /api/v1/bowling_games/1 (UPDATE)
 
-* System dependencies
 
-* Configuration
+## Example SHOW, CREATE and UPDATE
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
