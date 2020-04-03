@@ -85,4 +85,39 @@ https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/1?locale=es
 }
 ```
 
+# Bowling Lane
+
+#### GET  /api/v1/bowling_lanes               (INDEX)
+#### GET  /api/v1/bowling_lanes/1             (SHOW)
+#### POST /api/v1/bowling_lanes               (CREATE)
+#### PATCH/PUT /api/v1/bowling_lanes          (UPDATE)
+
+
+## Examples of SHOW and CREATE
+
+
+
+- CREATE POST params(length)
+
+https://bowling-api-mao.herokuapp.com/api/v1/bowling_lanes?locale=es
+```
+{
+  "bowling_lane":{
+        "length": "33"
+	}
+}
+
+```
+
+- SHOW GET params (id_bowling_ling)
+
+https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/points?locale=es
+
+```
+{
+    "id": 1,
+    "length": "33"
+}
+```
+
 
