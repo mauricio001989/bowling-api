@@ -85,6 +85,8 @@ https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/1?locale=es
 }
 ```
 
+
+
 # Bowling Lane
 
 #### GET  /api/v1/bowling_lanes               (INDEX)
@@ -119,5 +121,46 @@ https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/points?locale=es
     "length": "33"
 }
 ```
+
+
+# User
+
+#### GET  /api/v1/users               (INDEX)
+#### GET  /api/v1/users/1             (SHOW)
+#### POST /api/v1/users               (CREATE)
+#### PATCH/PUT /api/v1/users          (UPDATE)
+
+
+## Examples of SHOW and CREATE
+
+
+- CREATE POST params(email, name, document)
+
+https://bowling-api-mao.herokuapp.com/api/v1/users?locale=es
+```
+{
+  "user": {
+    	"email": "maoo@ggg.com",
+    	"name": "mao",
+    	"document": "1234"
+    }
+}
+
+```
+
+- SHOW GET params (id_user)
+
+https://bowling-api-mao.herokuapp.com/api/v1/bowling_games/points?locale=es
+
+```
+{
+    "id": 1,
+    "name": "caMI",
+    "document": "123",
+    "email": "cami@ggg.com"
+}
+```
+
+
 
 
