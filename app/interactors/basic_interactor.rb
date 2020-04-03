@@ -6,15 +6,11 @@ class BasicInteractor
   def limint_roun
     return false unless @points.count == 10
 
-    if @points.last(2).first[number_raund -1]['accumulate'] >= 1
-      suma_accumulate_2(2, -1)
-    end
+    suma_accumulate_2(2, -1) if @points.last(2).first[number_raund -1]['accumulate'] >= 1
 
-    if @points.last[number_raund 0]['accumulate'] >= 1
-      suma_accumulate_2(1, 0)
-    end
+    suma_accumulate_2(1, 0) if @points.last[number_raund 0]['accumulate'] >= 1
 
-    return true
+    true
   end
 
   def number_raund(number)
@@ -37,18 +33,14 @@ class BasicInteractor
 
   def suma_accumulate
     if @points.count > 1
-      if @points.last(2).first[number_raund -1]['accumulate'] >= 1
-        suma_accumulate_2(2, -1)
-      end
+      suma_accumulate_2(2, -1) if @points.last(2).first[number_raund -1]['accumulate'] >= 1
     end
     return unless @points.count > 2
 
-    if @points.last(3).first[number_raund -2]['accumulate'] >= 1
-      suma_accumulate_2(3, -2)
-    end
+    suma_accumulate_2(3, -2) if @points.last(3).first[number_raund -2]['accumulate'] >= 1
   end
 
-  def suma_accumulate_2(points_location , raund)
+  def suma_accumulate_2(points_location, raund)
     bowling_game.points.last(points_location).first[number_raund raund]['accumulate'] += -1
     bowling_game.total_points += point
     bowling_game.save
