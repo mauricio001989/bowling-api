@@ -16,10 +16,10 @@ module Api
         render json: validate? ? update_bowling_game : create_bowling_game, status: :created
       end
 
-      # PATCH/PUT /api/v1/bowling_games/1
+      # PATCH/PUT /api/v1/bowling_games/points
       def update
         result = Bowlings::CreateBowlingGame.call(
-          bowling_game: bowling_game, point: params.require(:points)
+          bowling_game: bowling_game, point: params.require(:points).to_i
         ).output
 
         render json: result
